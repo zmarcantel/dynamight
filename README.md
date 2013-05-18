@@ -5,12 +5,12 @@ Lightweight Async Tasking, View/Code loading, and Routing library for dynamic ap
 
 __Use it in the DOM. Use it in NodeJS.__
 
+[Designing Modular Websites](#design-implications)
+
 Version `0.1.0` Goals:
   1. Automated DOM Testing
   2. XMLHttpRequest2
-  3. Clean Up Documentation
-
-[Designing Modular Websites](#design-implications)
+  3. Clean up and add to documentation
 
 About
 ===============
@@ -95,6 +95,7 @@ Functions
     * [view()](#view)
     * [code()](#code)
     * [navigateTo()](#navigateTo)
+    * [ajax()](#ajax)
 
 ### .now()
 
@@ -186,3 +187,18 @@ Call upon the [router](#routing) to navigate to a given url relative to the top 
       v.navigateTo('home');
     else
       v.navigateTo('profile/edit');
+
+### .ajax()
+
+`.ajax(config)`
+
+Issues an ajax call according to the configuration given. Some headers must be set `manually` so don't expect Dynamight to do much automation `yet`.
+
+    dyna().ajax({
+        url: 'url/endpoint',
+        type: 'POST',         // or GET, DELETE, etc.
+        before: function(r)   // function to run before sending.
+                              // (r) is the xmlHR object. Use it to set headers
+        after: function(r)    // function to run on status_code == 4
+                              // check status, responseText, etc with (r)
+      })
