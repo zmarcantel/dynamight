@@ -1,0 +1,23 @@
+{
+  "name": "dynamight",
+  "version": "0.0.5",
+  "author": "Zachary Marcantel <zach@zmarcantel.com>",
+  "description": "Lightweight Async Tasking, View/Code loading, and Routing library for dynamic applications",
+  "contributors": [ 
+    {
+      "name": "Zachary Marcantel",
+      "email": "zach@zmarcantel.com"
+    } 
+  ],
+  "bin": {
+    "server": "dynamight.js"
+  },
+  "devDependencies" : {
+    "mocha"       : ">0",
+    "should"      : ">0"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">0"
+  }
+}

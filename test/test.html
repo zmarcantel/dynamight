@@ -1,0 +1,25 @@
+<html>
+
+  <body>
+
+    <div id="test-container"></div>
+
+    <script type="text/javscript" src="../dynamight.js"></script>
+    <script type="text/javscript">
+      var container = document.getElementById("test-container");
+      var d = dyna({
+        container: container,
+      });
+  
+      d.now(function(){
+          container.innerHTML += "DOM testing coming before v0.1.0. Help build it?<br />";
+          container.innerHTML += "All Async Functions will work and using it tells me the DOM does too<br />";
+          container.innerHTML += "Testing is needed of course! Especially on AJAX to be sure...<br /><br />";
+  
+          container.innerHTML += "Best way probably to use Express or similar within node to create test server.<br />";
+        })
+    </script>
+
+  </body>
+
+</html>
